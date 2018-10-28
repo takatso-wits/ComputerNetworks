@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prime Numbers"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="25sp"
+        />
+    <EditText
+        android:id="@+id/et_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Starting Point"
+        android:ems="10"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/et_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ending Point"
+        android:ems="10"
+        android:inputType="number" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSend"
+        android:text="Send"
+        android:layout_marginTop="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display the pimes here"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="15dp"
+                android:textSize="16dp"
+                android:text="Time Take (ns):" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_time"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="15dp"
+                android:textSize="16dp"
+                android:text="Number of Primes: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_num_primes"
+                />
+        </TableRow>
+    </TableLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrimes"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            />
+    </ScrollView>
+
+</LinearLayout>

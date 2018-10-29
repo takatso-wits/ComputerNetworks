@@ -8,15 +8,6 @@
     android:background="@android:color/holo_orange_dark"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/et_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Starting Point"
-        android:ems="10"
-        android:background="@android:color/white"
-        android:layout_gravity="center" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

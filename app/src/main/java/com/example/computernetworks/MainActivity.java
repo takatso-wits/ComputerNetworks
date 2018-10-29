@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity{
 
         startPoint = (EditText)findViewById(R.id.et_A);
         endPoint = (EditText)findViewById(R.id.et_B);
-        dat = (EditText)findViewById(R.id.et_Text);
         tvDisplay = (TextView)findViewById(R.id.tvPrimes);
         btnSend = (Button)findViewById(R.id.btnSend);
         tvDisplayPrimes = (TextView)findViewById(R.id.tv_num_primes);

@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity/* implements View.OnClickLis
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                primeNumbers.clear();
+                duration =0;
+                tvDisplay.setText("");
+                tvDisplayTime.setText("");
+                tvDisplayPrimes.setText("");
                 n1 = startPoint.getText().toString();
                 n2 = endPoint.getText().toString().trim();
                 num1 = Integer.parseInt(n1);

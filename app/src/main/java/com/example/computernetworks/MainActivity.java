@@ -13,11 +13,11 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity/* implements View.OnClickListener*/{
-    EditText startPoint, endPoint,num;
+public class MainActivity extends AppCompatActivity{
+    EditText startPoint, endPoint,num, dat;
     TextView tvDisplay,tvDisplayTime, tvDisplayPrimes;
     Button btnSend;
-    Integer num1, num2;
+    Integer num1, num2, mid, b;
     String n1, n2;
     ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
     long startTime, finishTime,duration;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity/* implements View.OnClickLis
 
         startPoint = (EditText)findViewById(R.id.et_A);
         endPoint = (EditText)findViewById(R.id.et_B);
+        dat = (EditText)findViewById(R.id.et_Text);
         tvDisplay = (TextView)findViewById(R.id.tvPrimes);
         btnSend = (Button)findViewById(R.id.btnSend);
         tvDisplayPrimes = (TextView)findViewById(R.id.tv_num_primes);
@@ -37,7 +38,25 @@ public class MainActivity extends AppCompatActivity/* implements View.OnClickLis
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                primeNumbers.clear();
+
+                num1 = Integer.parseInt(startPoint.getText().toString());
+                num2 = Integer.parseInt(endPoint.getText().toString());
+                valicateInput(num1,num2);
+                mid = (num1+num2)/2;
+
+                /*Here I am creating sockets for Host 1*/
+              SendData socket1 = new SendData();
+              SendData socket2 = new SendData();
+                socket1.execute(num1.toString());
+                socket2.execute(mid.toString());
+                mid = mid+1;
+                /*Here I am creating sockets for Host 2*/
+                SendData socket3 = new SendData();
+                SendData socket4 = new SendData();
+                socket3.execute(mid.toString());
+                socket4.execute(num2.toString());
+
+                /*primeNumbers.clear();
                 duration =0;
                 tvDisplay.setText("");
                 tvDisplayTime.setText("");
@@ -46,13 +65,13 @@ public class MainActivity extends AppCompatActivity/* implements View.OnClickLis
                 n2 = endPoint.getText().toString().trim();
                 num1 = Integer.parseInt(n1);
                 num2 = Integer.parseInt(n2);
-                valicateInput(num1,num2);
-                /*This is the method we should time*/
+
+                *//*This is the method we should time*//*
                 startTime = System.nanoTime();
                 calculatePrimes(num1,num2);
                 finishTime = System.nanoTime();
                 duration = (finishTime-startTime);
-                printPrimeNumbers(primeNumbers);
+                printPrimeNumbers(primeNumbers);*/
 
 
 

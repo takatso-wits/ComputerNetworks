@@ -46,15 +46,17 @@ public class MainActivity extends AppCompatActivity{
 
                 /*Here I am creating sockets for Host 1*/
               SendData socket1 = new SendData();
-              SendData socket2 = new SendData();
-                socket1.execute(num1.toString());
-                socket2.execute(mid.toString());
+//              SendData socket2 = new SendData();
+              String d1 = num1.toString()+","+mid.toString();
+                socket1.execute(d1, "0");
+//                socket2.execute(mid.toString(), "0");
                 mid = mid+1;
                 /*Here I am creating sockets for Host 2*/
                 SendData socket3 = new SendData();
-                SendData socket4 = new SendData();
-                socket3.execute(mid.toString());
-                socket4.execute(num2.toString());
+//                SendData socket4 = new SendData();
+                String d2 = mid.toString() + "," + num2.toString();
+                socket3.execute(d2, "1");
+//                socket4.execute(num2.toString(), "1");
 
                 /*primeNumbers.clear();
                 duration =0;

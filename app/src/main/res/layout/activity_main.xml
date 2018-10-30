@@ -33,18 +33,10 @@
         android:hint="Ending Point"
         android:background="@android:color/white"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="number" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:layout_gravity="center"
-        android:id="@+id/btnSend"
-        android:text="Send"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="20sp"
-        />
+
 
     <TableLayout
         android:layout_width="wrap_content"
@@ -57,57 +49,104 @@
                 android:layout_marginTop="15dp"
                 android:textSize="20dp"
                 android:text="Time Take (ns):" />
-
+        </TableRow>
+        <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="@android:color/black"
-                android:id="@+id/tv_time"
+                android:text="Host 1: "
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Time"
+                android:id="@+id/tvHost1_time"
                 />
         </TableRow>
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:paddingBottom="10sp"
-                android:layout_gravity="center"
                 android:textSize="20dp"
-                android:text="Number of Primes: " />
-
+                android:textColor="@android:color/black"
+                android:text="Host 2: "
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Time"
+                android:id="@+id/tvHost2_time"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:paddingBottom="10sp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="Number of Primes: " />
+            <TextView
+                android:id="@+id/tv_totalPrimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
                 android:paddingBottom="10sp"
                 android:layout_gravity="center"
                 android:textSize="20dp"
-                android:textColor="@android:color/white"
-                android:id="@+id/tv_num_primes"
+                android:text="Total" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Host 1: "
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Primes"
+                android:id="@+id/tvHost1_prime"
                 />
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Host 2: "
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:text="Primes"
+                android:id="@+id/tvHost2_primes"
+                />
+        </TableRow>
+
     </TableLayout>
-    <TextView
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prime Numbers will appear below:"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center"
-        />
-    <ScrollView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvPrimes"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:layout_gravity="center"
-            />
-    </ScrollView>
-
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:id="@+id/btnSend"
+        android:text="Send"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20sp"
+        />
 </LinearLayout>
